@@ -52,7 +52,7 @@ namespace fuzzy
     }
 
     Costs(size_t pattern_length, size_t sentence_length, EditCosts edit_costs)
-      : diff_word(100.f / get_normalizer(pattern_length, sentence_length, edit_costs))
+      : diff_word(100.f / std::max(pattern_length, sentence_length))
     {
     }
 
