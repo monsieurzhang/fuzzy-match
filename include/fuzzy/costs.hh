@@ -42,7 +42,7 @@ namespace fuzzy
       } else if (pattern_length <= sentence_length) {
         return (edit_costs.replace_cost - edit_costs.delete_cost) * (float)pattern_length + edit_costs.delete_cost * (float)sentence_length;
       } else {
-        return (edit_costs.replace_cost - edit_costs.insert_cost) * (float)sentence_length + edit_costs.insert_cost * (float)sentence_length;
+        return (edit_costs.replace_cost - edit_costs.insert_cost) * (float)sentence_length + edit_costs.insert_cost * (float)pattern_length;
       }
     }
 
